@@ -7,15 +7,15 @@ license = "Apache"
 
 [tool.poetry.dependencies]
 python = "^3.8"
+dependencies = ["typing-extensions >=4.2.0", "jsonalias ==0.1.1"]
 
-[tool.poetry.group.dev.dependencies]
+[tool.poetry.dev-dependencies]
 sphinx = "6.2.1"
 sphinx-rtd-theme = "1.2.0"
 maturin = "1.8.1"
 pybip39 = "0.1.0"
 based58 = "0.1.1"
 bumpversion = "0.6.0"
-"jsonalias" = "0.1.1"
 ruff = "0.1.6"
 mnemonic = "0.20"
 mypy = "0.991"
@@ -25,27 +25,6 @@ myst-parser = "^1.0.0"
 [build-system]
 requires = ["maturin>=1.8.1,<1.9"]
 build-backend = "maturin"
-
-
-[project]
-name = "solders"
-version = "0.26.0"
-description = "Python bindings for Solana Rust tools"
-authors = [ {name = "kevinheavey", email = "kevinheavey123@gmail.com"} ]
-license = {file = "LICENSE"} # relative to the package/ directory
-requires-python = ">=3.7"
-classifiers = [
-    "Programming Language :: Rust",
-    "Programming Language :: Python :: Implementation :: CPython",
-    "Programming Language :: Python :: Implementation :: PyPy",
-]
-dependencies = ["typing-extensions >=4.2.0", "jsonalias ==0.1.1"]
-
-[project.urls]
-homepage = "https://github.com/kevinheavey/solders"
-documentation = "https://kevinheavey.github.io/solders/"
-repository = "https://github.com/kevinheavey/solders"
-changelog = "https://github.com/kevinheavey/solders/blob/main/CHANGELOG.md"
 
 [tool.maturin]
 python-source = "python"
